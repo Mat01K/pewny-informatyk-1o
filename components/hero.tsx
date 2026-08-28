@@ -1,11 +1,10 @@
 import {
   CheckCircle2,
-  Laptop,
-  Monitor,
   PhoneCall,
-  Server,
-  ShieldCheck,
-  Wifi,
+  PhoneIncoming,
+  Search,
+  Ticket,
+  Wrench,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -15,11 +14,31 @@ const TRUST_POINTS = [
   'Wycena po rozmowie, bez niespodzianek',
 ]
 
-const STATUS_ROWS = [
-  { icon: Server, label: 'Serwer księgowości', status: 'Działa' },
-  { icon: Wifi, label: 'Sieć — biuro główne', status: 'Działa' },
-  { icon: ShieldCheck, label: 'Ochrona antywirusowa', status: 'Aktywna' },
-  { icon: Laptop, label: 'Stacje robocze (18)', status: 'Zaktualizowane' },
+const TIMELINE_STEPS = [
+  {
+    icon: PhoneIncoming,
+    time: '09:14',
+    title: 'Zgłoszenie przyjęte',
+    detail: 'Klient dzwoni: serwer księgowości nie odpowiada',
+  },
+  {
+    icon: Search,
+    time: '09:19',
+    title: 'Diagnoza',
+    detail: 'Zdalne połączenie, sprawdzamy usługi i logi',
+  },
+  {
+    icon: Wrench,
+    time: '09:41',
+    title: 'Naprawa',
+    detail: 'Restart usługi bazy danych, wymiana zasilacza',
+  },
+  {
+    icon: CheckCircle2,
+    time: '09:52',
+    title: 'Gotowe',
+    detail: 'Serwer działa, klient poinformowany telefonicznie',
+  },
 ]
 
 export function Hero() {
@@ -83,70 +102,57 @@ export function Hero() {
             <div className="flex items-center justify-between gap-3 border-b border-border bg-secondary/60 px-5 py-4">
               <div className="flex items-center gap-2.5">
                 <span className="flex size-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <Monitor className="size-4" />
+                  <Ticket className="size-4" />
                 </span>
                 <div>
                   <p className="font-heading text-sm font-semibold text-foreground">
-                    Panel klienta
+                    Zgłoszenie #482
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    Stan infrastruktury na żywo
+                    Serwer księgowości nie odpowiadał
                   </p>
                 </div>
               </div>
               <span className="flex items-center gap-1.5 rounded-full bg-accent/15 px-2.5 py-1 text-xs font-medium text-accent">
-                <span className="size-1.5 animate-pulse rounded-full bg-accent" />
-                Online
+                <CheckCircle2 className="size-3.5" />
+                Rozwiązane
               </span>
             </div>
 
-            <div className="flex flex-col gap-1 p-4">
-              {STATUS_ROWS.map((row) => (
-                <div
-                  key={row.label}
-                  className="flex items-center justify-between gap-3 rounded-lg px-3 py-3"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-foreground">
-                      <row.icon className="size-4" />
-                    </span>
-                    <span className="text-sm font-medium text-foreground">
-                      {row.label}
-                    </span>
-                  </div>
-                  <span className="flex items-center gap-1.5 text-xs font-medium text-accent">
-                    <CheckCircle2 className="size-3.5" />
-                    {row.status}
+            <ol className="flex flex-col gap-0 p-5">
+              {TIMELINE_STEPS.map((step, index) => (
+                <li key={step.title} className="relative flex gap-4 pb-6 last:pb-0">
+                  {index < TIMELINE_STEPS.length - 1 && (
+                    <span
+                      aria-hidden
+                      className="absolute left-[15px] top-8 h-[calc(100%-1.25rem)] w-px bg-border"
+                    />
+                  )}
+                  <span className="relative z-10 flex size-8 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-foreground">
+                    <step.icon className="size-4" />
                   </span>
-                </div>
+                  <div className="flex flex-1 flex-col gap-0.5 pt-0.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="text-sm font-semibold text-foreground">
+                        {step.title}
+                      </p>
+                      <span className="font-mono text-xs text-muted-foreground">
+                        {step.time}
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{step.detail}</p>
+                  </div>
+                </li>
               ))}
-            </div>
+            </ol>
 
-            <div className="grid grid-cols-3 gap-3 border-t border-border p-4">
-              <div className="rounded-lg bg-secondary/60 p-3.5">
-                <p className="font-heading text-2xl font-semibold text-primary">
-                  15 min
-                </p>
-                <p className="mt-0.5 text-xs text-muted-foreground">
-                  czas pierwszej odpowiedzi
-                </p>
-              </div>
-              <div className="rounded-lg bg-secondary/60 p-3.5">
-                <p className="font-heading text-2xl font-semibold text-primary">
-                  24/7
-                </p>
-                <p className="mt-0.5 text-xs text-muted-foreground">
-                  monitoring usług
-                </p>
-              </div>
-              <div className="rounded-lg bg-secondary/60 p-3.5">
-                <p className="font-heading text-2xl font-semibold text-primary">
-                  0
-                </p>
-                <p className="mt-0.5 text-xs text-muted-foreground">
-                  zgłoszeń bez odpowiedzi
-                </p>
-              </div>
+            <div className="flex items-center justify-between gap-3 border-t border-border bg-secondary/60 px-5 py-4">
+              <p className="text-sm text-muted-foreground">
+                Czas rozwiązania sprawy
+              </p>
+              <p className="font-heading text-xl font-semibold text-primary">
+                38 minut
+              </p>
             </div>
           </div>
         </div>
