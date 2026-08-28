@@ -70,9 +70,10 @@ export function Contact() {
                   <MapPin className="size-4.5" />
                 </span>
                 <div>
-                  <p className="text-sm text-muted-foreground">Obszar działania</p>
-                  <p className="font-medium text-foreground">
-                    Ruda Śląska, cały Śląsk i cała Polska
+                  <p className="text-sm text-muted-foreground">Biuro</p>
+                  <p className="font-medium text-foreground">Ruda Śląska</p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Obszar działania: Cała Polska
                   </p>
                 </div>
               </li>
