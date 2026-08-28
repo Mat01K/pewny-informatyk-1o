@@ -1,11 +1,25 @@
-import { CheckCircle2, PhoneCall } from 'lucide-react'
+import {
+  CheckCircle2,
+  Laptop,
+  Monitor,
+  PhoneCall,
+  Server,
+  ShieldCheck,
+  Wifi,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 
 const TRUST_POINTS = [
   'Reakcja tego samego dnia',
   'Umowa bez zobowiązań na lata',
   'Wycena po rozmowie, bez niespodzianek',
+]
+
+const STATUS_ROWS = [
+  { icon: Server, label: 'Serwer księgowości', status: 'Działa' },
+  { icon: Wifi, label: 'Sieć — biuro główne', status: 'Działa' },
+  { icon: ShieldCheck, label: 'Ochrona antywirusowa', status: 'Aktywna' },
+  { icon: Laptop, label: 'Stacje robocze (18)', status: 'Zaktualizowane' },
 ]
 
 export function Hero() {
@@ -66,22 +80,74 @@ export function Hero() {
 
         <div className="relative">
           <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-black/10">
-            <Image
-              src="/images/hero-technician.png"
-              alt="Informatyk serwisujący sprzęt firmowy w biurze klienta"
-              width={960}
-              height={1120}
-              className="h-full w-full object-cover"
-              priority
-            />
-          </div>
-          <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-xl border border-border bg-popover p-4 shadow-xl sm:block">
-            <p className="font-heading text-2xl font-semibold text-primary">
-              15 min
-            </p>
-            <p className="mt-1 text-sm text-muted-foreground">
-              średni czas do pierwszej odpowiedzi zdalnej
-            </p>
+            <div className="flex items-center justify-between gap-3 border-b border-border bg-secondary/60 px-5 py-4">
+              <div className="flex items-center gap-2.5">
+                <span className="flex size-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Monitor className="size-4" />
+                </span>
+                <div>
+                  <p className="font-heading text-sm font-semibold text-foreground">
+                    Panel klienta
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Stan infrastruktury na żywo
+                  </p>
+                </div>
+              </div>
+              <span className="flex items-center gap-1.5 rounded-full bg-accent/15 px-2.5 py-1 text-xs font-medium text-accent">
+                <span className="size-1.5 animate-pulse rounded-full bg-accent" />
+                Online
+              </span>
+            </div>
+
+            <div className="flex flex-col gap-1 p-4">
+              {STATUS_ROWS.map((row) => (
+                <div
+                  key={row.label}
+                  className="flex items-center justify-between gap-3 rounded-lg px-3 py-3"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-foreground">
+                      <row.icon className="size-4" />
+                    </span>
+                    <span className="text-sm font-medium text-foreground">
+                      {row.label}
+                    </span>
+                  </div>
+                  <span className="flex items-center gap-1.5 text-xs font-medium text-accent">
+                    <CheckCircle2 className="size-3.5" />
+                    {row.status}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-3 gap-3 border-t border-border p-4">
+              <div className="rounded-lg bg-secondary/60 p-3.5">
+                <p className="font-heading text-2xl font-semibold text-primary">
+                  15 min
+                </p>
+                <p className="mt-0.5 text-xs text-muted-foreground">
+                  czas pierwszej odpowiedzi
+                </p>
+              </div>
+              <div className="rounded-lg bg-secondary/60 p-3.5">
+                <p className="font-heading text-2xl font-semibold text-primary">
+                  24/7
+                </p>
+                <p className="mt-0.5 text-xs text-muted-foreground">
+                  monitoring usług
+                </p>
+              </div>
+              <div className="rounded-lg bg-secondary/60 p-3.5">
+                <p className="font-heading text-2xl font-semibold text-primary">
+                  0
+                </p>
+                <p className="mt-0.5 text-xs text-muted-foreground">
+                  zgłoszeń bez odpowiedzi
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
