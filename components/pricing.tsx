@@ -11,7 +11,7 @@ const INCLUDED = [
 const FACTORS = [
   'Liczba pracowników i stanowisk komputerowych',
   'Liczba i rodzaj serwerów oraz urządzeń sieciowych',
-  'Programy specjalistyczne (Płatnik, Comarch, SAP i inne)',
+  'Programy specjalistyczne (Płatnik, Comarch i inne)',
   'Czas reakcji, jakiego potrzebuje Twoja firma',
 ]
 

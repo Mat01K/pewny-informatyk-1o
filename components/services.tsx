@@ -18,8 +18,8 @@ const SERVICES = [
   {
     icon: Calculator,
     title: 'Znajomość programów branżowych',
-    text: 'Zajmujemy się programami z wielu specjalizacji — od Płatnika i Comarch ERP/Optima, przez systemy SAP, po narzędzia finansowe, kadrowe, magazynowe i inne programy używane w firmach.',
-    tags: ['Płatnik', 'Comarch', 'SAP'],
+    text: 'Zajmujemy się programami z wielu specjalizacji — od Płatnika i Comarch ERP/Optima po narzędzia finansowe, kadrowe, magazynowe i inne programy używane w firmach.',
+    tags: ['Płatnik', 'Comarch', 'Programy branżowe'],
   },
   {
     icon: Network,

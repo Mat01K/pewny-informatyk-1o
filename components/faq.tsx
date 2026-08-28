@@ -19,7 +19,7 @@ const FAQ_ITEMS = [
   {
     question: 'Obsługujecie programy księgowe, np. Comarch czy Płatnik?',
     answer:
-      'Tak, to jedna z naszych specjalizacji. Wspieramy biura księgowe i firmy korzystające z Płatnika, Comarch ERP/Optima, systemów klasy SAP i innych programów finansowo-księgowych — od instalacji, przez aktualizacje, po awarie.',
+      'Tak, to jedna z naszych specjalizacji. Wspieramy biura księgowe i firmy korzystające z Płatnika, Comarch ERP/Optima oraz innych programów finansowo-księgowych — od instalacji, przez aktualizacje, po awarie.',
   },
   {
     question: 'Możecie przyjechać na miejsce, czy tylko zdalnie?',
