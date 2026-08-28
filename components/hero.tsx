@@ -21,7 +21,7 @@ export function Hero() {
           <h1 className="mt-6 text-balance font-heading text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem]">
             Informatyk, który{' '}
             <span className="text-primary">odbiera telefon</span> i naprawia
-            sprawę
+            problem
           </h1>
 
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
