@@ -46,8 +46,8 @@ export function Contact() {
                 </span>
                 <div>
                   <p className="text-sm text-muted-foreground">Telefon</p>
-                  <a href="tel:+48221234567" className="font-medium text-foreground hover:text-primary">
-                    +48 22 123 45 67
+                  <a href="tel:+48503403833" className="font-medium text-foreground hover:text-primary">
+                    +48 503 403 833
                   </a>
                 </div>
               </li>
@@ -72,7 +72,7 @@ export function Contact() {
                 <div>
                   <p className="text-sm text-muted-foreground">Obszar działania</p>
                   <p className="font-medium text-foreground">
-                    Warszawa i okolice, wsparcie zdalne w całej Polsce
+                    Ruda Śląska, cały Śląsk i cała Polska
                   </p>
                 </div>
               </li>
