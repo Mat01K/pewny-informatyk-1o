@@ -81,9 +81,6 @@ export function Hero() {
                   <span className="size-2 animate-pulse rounded-full bg-accent" />
                   IT, które po prostu działa
                 </div>
-                <p className="mt-3 max-w-sm font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
-                  Spokojna głowa zaczyna się od sprawnego IT.
-                </p>
               </div>
             </div>
           </div>
