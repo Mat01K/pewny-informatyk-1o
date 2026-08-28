@@ -60,8 +60,8 @@ export function Services() {
           </h2>
           <p className="mt-3 text-pretty text-lg leading-relaxed text-muted-foreground">
             Od pojedynczego komputera do całej infrastruktury biura
-            księgowego. Realnie zajmujemy się prawie wszystkim, co dotyczy
-            IT — a czego nie robimy sami, znajdziemy komu zlecić.
+            księgowego. Zajmujemy się wszystkim, co dotyczy IT — Ty masz
+            jeden numer, a my ogarniamy resztę.
           </p>
         </div>
 
