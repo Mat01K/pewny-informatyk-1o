@@ -1,44 +1,11 @@
-import {
-  CheckCircle2,
-  PhoneCall,
-  PhoneIncoming,
-  Search,
-  Ticket,
-  Wrench,
-} from 'lucide-react'
+import { CheckCircle2, PhoneCall } from 'lucide-react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 
 const TRUST_POINTS = [
   'Reakcja tego samego dnia',
   'Umowa bez zobowiązań na lata',
   'Wycena po rozmowie, bez niespodzianek',
-]
-
-const TIMELINE_STEPS = [
-  {
-    icon: PhoneIncoming,
-    time: '09:14',
-    title: 'Zgłoszenie przyjęte',
-    detail: 'Klient dzwoni: serwer księgowości nie odpowiada',
-  },
-  {
-    icon: Search,
-    time: '09:19',
-    title: 'Diagnoza',
-    detail: 'Zdalne połączenie, sprawdzamy usługi i logi',
-  },
-  {
-    icon: Wrench,
-    time: '09:41',
-    title: 'Naprawa',
-    detail: 'Restart usługi bazy danych, wymiana zasilacza',
-  },
-  {
-    icon: CheckCircle2,
-    time: '09:52',
-    title: 'Gotowe',
-    detail: 'Serwer działa, klient poinformowany telefonicznie',
-  },
 ]
 
 export function Hero() {
@@ -98,61 +65,26 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <div className="overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-black/10">
-            <div className="flex items-center justify-between gap-3 border-b border-border bg-secondary/60 px-5 py-4">
-              <div className="flex items-center gap-2.5">
-                <span className="flex size-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <Ticket className="size-4" />
-                </span>
-                <div>
-                  <p className="font-heading text-sm font-semibold text-foreground">
-                    Zgłoszenie #482
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    Serwer księgowości nie odpowiadał
-                  </p>
+          <div className="group overflow-hidden rounded-2xl border border-border bg-card shadow-2xl shadow-black/10">
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <Image
+                src="/images/hero-office.png"
+                alt="Informatyk pomagający firmie przy komputerze"
+                width={960}
+                height={1200}
+                className="hero-image-motion h-full w-full object-cover animate-[hero-kenburns_16s_ease-in-out_infinite_alternate]"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                <div className="flex items-center gap-2 text-sm font-medium text-primary">
+                  <span className="size-2 animate-pulse rounded-full bg-accent" />
+                  IT, które po prostu działa
                 </div>
+                <p className="mt-3 max-w-sm font-heading text-2xl font-semibold leading-tight text-foreground sm:text-3xl">
+                  Spokojna głowa zaczyna się od sprawnego IT.
+                </p>
               </div>
-              <span className="flex items-center gap-1.5 rounded-full bg-accent/15 px-2.5 py-1 text-xs font-medium text-accent">
-                <CheckCircle2 className="size-3.5" />
-                Rozwiązane
-              </span>
-            </div>
-
-            <ol className="flex flex-col gap-0 p-5">
-              {TIMELINE_STEPS.map((step, index) => (
-                <li key={step.title} className="relative flex gap-4 pb-6 last:pb-0">
-                  {index < TIMELINE_STEPS.length - 1 && (
-                    <span
-                      aria-hidden
-                      className="absolute left-[15px] top-8 h-[calc(100%-1.25rem)] w-px bg-border"
-                    />
-                  )}
-                  <span className="relative z-10 flex size-8 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-foreground">
-                    <step.icon className="size-4" />
-                  </span>
-                  <div className="flex flex-1 flex-col gap-0.5 pt-0.5">
-                    <div className="flex items-center justify-between gap-2">
-                      <p className="text-sm font-semibold text-foreground">
-                        {step.title}
-                      </p>
-                      <span className="font-mono text-xs text-muted-foreground">
-                        {step.time}
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{step.detail}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-
-            <div className="flex items-center justify-between gap-3 border-t border-border bg-secondary/60 px-5 py-4">
-              <p className="text-sm text-muted-foreground">
-                Czas rozwiązania sprawy
-              </p>
-              <p className="font-heading text-xl font-semibold text-primary">
-                38 minut
-              </p>
             </div>
           </div>
         </div>

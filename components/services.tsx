@@ -17,8 +17,8 @@ const SERVICES = [
   },
   {
     icon: Calculator,
-    title: 'Wsparcie dla biur księgowych',
-    text: 'Znamy Płatnika, Comarch ERP/Optima, systemy SAP i inne programy księgowe. Pomagamy z instalacją, aktualizacjami, migracją i awariami.',
+    title: 'Znajomość programów branżowych',
+    text: 'Zajmujemy się programami z wielu specjalizacji — od Płatnika i Comarch ERP/Optima, przez systemy SAP, po narzędzia finansowe, kadrowe, magazynowe i inne programy używane w firmach.',
     tags: ['Płatnik', 'Comarch', 'SAP'],
   },
   {

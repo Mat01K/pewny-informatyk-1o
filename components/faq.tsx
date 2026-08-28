@@ -34,7 +34,7 @@ const FAQ_ITEMS = [
   {
     question: 'Jak wygląda pierwszy kontakt z Wami?',
     answer:
-      'Umawiamy krótką, bezpłatną rozmowę — telefonicznie, online lub u Ciebie w firmie. Pytamy o to, jak wygląda Wasze IT i czego najbardziej potrzebujecie, a potem przygotowujemy wycenę bez zobowiązań.',
+      'Na pierwszym spotkaniu wykonujemy audyt całej infrastruktury IT — sprawdzamy sprzęt, serwery, sieć, programy, licencje i zabezpieczenia. Na tej podstawie spokojnie omawiamy potrzeby firmy i przygotowujemy indywidualną wycenę bez zobowiązań.',
   },
 ]
 

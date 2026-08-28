@@ -2,8 +2,8 @@ import { Button } from '@/components/ui/button'
 
 const STEPS = [
   {
-    title: 'Rozmawiamy',
-    text: 'Dzwonimy albo spotykamy się (u Ciebie lub online) i na spokojnie pytamy o firmę: ile osób, jaki sprzęt, jakie programy, co najbardziej boli.',
+    title: 'Audyt infrastruktury IT',
+    text: 'Na pierwszym spotkaniu spokojnie audytujemy całą infrastrukturę IT — sprzęt, serwery, sieć, programy, licencje i zabezpieczenia. Dzięki temu wiemy, czego naprawdę potrzebuje Twoja firma.',
   },
   {
     title: 'Przygotowujemy wycenę',
@@ -28,7 +28,7 @@ export function Process() {
             Jak to działa
           </p>
           <h2 className="mt-3 text-balance font-heading text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Cztery kroki, żadnych niespodzianek
+            Na pierwszym spotkaniu audytujemy całe IT
           </h2>
         </div>
 
