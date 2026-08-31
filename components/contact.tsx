@@ -1,27 +1,12 @@
 'use client'
 
-import { useState, type FormEvent } from 'react'
 import { Mail, MapPin, Phone } from 'lucide-react'
-import { toast } from 'sonner'
 import { Button } from '@/components/ui/button'
 import { Field, FieldGroup, FieldLabel } from '@/components/ui/field'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 
 export function Contact() {
-  const [submitting, setSubmitting] = useState(false)
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setSubmitting(true)
-
-    setTimeout(() => {
-      setSubmitting(false)
-      event.currentTarget.reset()
-      toast.success('Dziękujemy! Odezwiemy się w ciągu jednego dnia roboczego.')
-    }, 700)
-  }
-
   return (
     <section id="kontakt" className="border-b border-border/60 bg-muted/40">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
@@ -81,9 +66,15 @@ export function Contact() {
           </div>
 
           <form
-            onSubmit={handleSubmit}
+            action="https://api.web3forms.com/submit"
+            method="POST"
             className="rounded-2xl border border-border bg-card p-6 sm:p-8"
           >
+            <input type="hidden" name="access_key" value="000bbad1-0794-470b-baed-1d6699a6346f" />
+            <input type="hidden" name="from_name" value="Pewny Informatyk Formularz" />
+            <input type="hidden" name="subject" value="Nowe zapytanie z pewnyinformatyk.pl" />
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
             <FieldGroup>
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field>
@@ -102,7 +93,7 @@ export function Contact() {
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="email">E-mail</FieldLabel>
-                  <Input id="email" name="email" type="email" placeholder="jan@firma.pl" />
+                  <Input id="email" name="email" type="email" placeholder="jan@firma.pl" required />
                 </Field>
               </div>
               <Field>
@@ -112,10 +103,11 @@ export function Contact() {
                   name="message"
                   placeholder="Np. potrzebujemy wsparcia dla 12 komputerów i programu Comarch Optima"
                   className="min-h-28"
+                  required
                 />
               </Field>
-              <Button type="submit" size="lg" disabled={submitting} className="mt-2">
-                {submitting ? 'Wysyłanie…' : 'Wyślij zapytanie'}
+              <Button type="submit" size="lg" className="mt-2">
+                Wyślij zapytanie
               </Button>
               <p className="text-xs leading-relaxed text-muted-foreground">
                 Wysyłając formularz zgadzasz się na kontakt w celu przygotowania
