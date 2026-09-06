@@ -27,11 +27,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="#top" className="flex items-center py-2">
+        <Link href="#top" className="flex items-center">
           <img
             src="/Logo_transparent2.png"
             alt="Pewny Informatyk"
-            className="h-12 w-auto object-contain sm:h-14"
+            className="h-auto w-44 object-contain sm:w-52"
           />
         </Link>
 
