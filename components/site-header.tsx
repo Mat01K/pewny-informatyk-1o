@@ -27,11 +27,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="#top" className="flex items-center">
+        <Link href="#top" className="flex items-center py-2">
           <img
-            src="/Logo_transparent3.png"
+            src="/Logo_transparent2.png"
             alt="Pewny Informatyk"
-            className="h-14 w-auto object-contain"
+            className="h-12 w-auto object-contain sm:h-14"
           />
         </Link>
 
@@ -68,13 +68,13 @@ export function SiteHeader() {
               <SheetHeader>
                 <SheetTitle className="font-heading">
                   <img
-                    src="/Logo_transparent.png"
+                    src="/Logo_transparent2.png"
                     alt="Pewny Informatyk"
-                    className="h-8 w-auto object-contain"
+                    className="h-10 w-auto object-contain"
                   />
                 </SheetTitle>
               </SheetHeader>
-              <nav className="flex flex-col gap-1 px-4">
+              <nav className="mt-4 flex flex-col gap-1 px-4">
                 {NAV_LINKS.map((link) => (
                   <SheetClose
                     key={link.href}
@@ -89,7 +89,7 @@ export function SiteHeader() {
                   />
                 ))}
               </nav>
-              <div className="mt-2 px-4">
+              <div className="mt-4 px-4">
                 <SheetClose
                   render={
                     <Button
