@@ -56,6 +56,8 @@ export const metadata: Metadata = {
     'polecany informatyk dla firm',
     'sprawdzony informatyk',
     'rzetelna pomoc komputerowa',
+    'Ruda Śląska',
+    'Śląsk',
 
     // Frazy cenowe i dostępnościowe
     'tani informatyk',
@@ -102,6 +104,11 @@ export const metadata: Metadata = {
     'informatyk Śląsk',
     'informatyk zdalnie cała Polska',
     'zdalna pomoc komputerowa dla firm',
+    'dobry informatyk',
+    'tani informatyk',
+    'zdalny informatyk',
+    'pobliski informatyk',
+
   ],
   authors: [{ name: 'Pewny Informatyk', url: 'https://www.pewnyinformatyk.pl' }],
   creator: 'Pewny Informatyk',
@@ -129,25 +136,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/Logo_white.jpg',
+    apple: '/Logo_white.jpg',
   },
 }
-
 export const viewport: Viewport = {
   colorScheme: 'dark light',
   themeColor: [
