@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, ShieldCheck } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ThemeToggle } from '@/components/theme-toggle'
 import {
@@ -27,14 +27,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link
-          href="#top"
-          className="flex items-center gap-2 font-heading text-lg font-semibold tracking-tight text-foreground"
-        >
-          <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <ShieldCheck className="size-4.5" />
-          </span>
-          Pewny Informatyk
+        <Link href="#top" className="flex items-center">
+          <img
+            src="/Logo_transparent.png"
+            alt="Pewny Informatyk"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -68,7 +66,13 @@ export function SiteHeader() {
             />
             <SheetContent side="right" className="w-72">
               <SheetHeader>
-                <SheetTitle className="font-heading">Pewny Informatyk</SheetTitle>
+                <SheetTitle className="font-heading">
+                  <img
+                    src="/Logo_transparent.png"
+                    alt="Pewny Informatyk"
+                    className="h-8 w-auto object-contain"
+                  />
+                </SheetTitle>
               </SheetHeader>
               <nav className="flex flex-col gap-1 px-4">
                 {NAV_LINKS.map((link) => (
