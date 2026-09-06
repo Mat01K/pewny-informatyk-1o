@@ -29,7 +29,7 @@ export function SiteHeader() {
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link href="#top" className="flex items-center">
           <img
-            src="/Logo_transparent.png"
+            src="/Logo_transparent2.png"
             alt="Pewny Informatyk"
             className="h-14 w-auto object-contain"
           />
